@@ -1,4 +1,4 @@
-package percy.app;
+package percy.java.jdbc;
 
 /**
  * Hello world!
