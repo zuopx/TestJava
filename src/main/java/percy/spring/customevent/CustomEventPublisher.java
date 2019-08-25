@@ -5,15 +5,20 @@ import org.springframework.context.ApplicationEventPublisherAware;
 
 public class CustomEventPublisher implements ApplicationEventPublisherAware {
 
-    private ApplicationEventPublisher publisher;
+  private ApplicationEventPublisher publisher;
 
-    @Override
-    public void setApplicationEventPublisher(ApplicationEventPublisher publisher) {
-        this.publisher = publisher;
-    }
+  @Override
+  public void setApplicationEventPublisher(ApplicationEventPublisher publisher) {
+    this.publisher = publisher;
+  }
 
-    public void publish() {
-        CustomEvent customEvent = new CustomEvent(this);
-        publisher.publishEvent(customEvent);
-    }
+  public void publish() {
+    CustomEvent customEvent = new CustomEvent(this);
+    publisher.publishEvent(customEvent);
+  }
+
+  @Override
+  public String toString() {
+    return "CustomEventPublisher [publisher=" + publisher + "]";
+  }
 }
