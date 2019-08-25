@@ -50,3 +50,9 @@ how to execute?
 
 how to pass parameters?
 
+### Transaction
+
+/src/main/java/percy/spring/transaction/declarative/MainApp.java:
+the difference between 20th line and 21th line ???
+
+
