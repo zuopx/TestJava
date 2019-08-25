@@ -11,16 +11,17 @@
     <aop:config>
         <aop:aspect
                 id="log"
-                ref="logging">
+                ref="logging">  <!-- refer to an object-->
             <aop:pointcut
                     id="selectAll"
-                    expression="execution(* percy.spring.aop.*.*(..))" />
+                    expression="execution(* percy.spring.aop.*.*(..))" />  <!-- refer to methods-->
             <aop:before
                     pointcut-ref="selectAll"
                     method="beforeAdvice" />
             <aop:after
                     pointcut-ref="selectAll"
                     method="afterAdvice" />
+            <!-- returning is necessary, and must be corrent-->
             <aop:after-returning
                     pointcut-ref="selectAll"
                     returning="retVal"

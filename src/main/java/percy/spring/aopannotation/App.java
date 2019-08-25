@@ -11,5 +11,7 @@ public class App {
         student.getName();
         student.getAge();
         student.printThrowException();
+
+        System.out.println("Done!");
     }
 }

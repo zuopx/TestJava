@@ -8,13 +8,14 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.AfterReturning;
 // import org.aspectj.lang.annotation.Around;
 
+// define an aspect
 @Aspect
 public class Logging {
     /**
      * Following is the definition for a pointcut to select all the methods
      * available. So advice will be called for all the methods.
      */
-    @Pointcut("execution(* app.*.*(..))")
+    @Pointcut("execution(* percy.spring.aopannotation.*.*(..))")
     private void selectAll() {
     }
 
