@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="percy.mybatis.xmlmapper.VillageMapper">
+    <resultMap id="villageResult" type="village">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="district" column="district" />
+    </resultMap>
+    
+    <select id="selectVillage" resultType="Village" parameterType="int" resultMap="villageResult">
+        select id, name, district from Village where id = #{id}
+    </select>
+
+    <insert id="insertVillage" parameterType="Village" keyProperty="id" useGeneratedKeys="true">
+        insert into Village (name, district) values (#{name}, #{district})
+    </insert>
+
+    <update id="updateVillage" parameterType="Village">
+        update  Village set name=#{name}, district=#{district} where id=#{id}
+    </update>
+
+    <delete id="deleteVillage" parameterType="int">
+        delete from Village where id=#{id}
+    </delete>
+</mapper>
