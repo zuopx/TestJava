@@ -10,6 +10,6 @@ package percy.java.concurrent.advancedcollaboration;
 public class SemaphoreDemo {
 
   public static void main(String[] args) {
-    
+    System.out.println("Done!");
   }
 }
