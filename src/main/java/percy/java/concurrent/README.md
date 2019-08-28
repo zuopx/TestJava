@@ -33,3 +33,7 @@ three problems:
 ## Basic Collaboration Mechanisms
 
 lock queue and condition queue
+
+## Collection
+
+According to the application need, choose collection class.
